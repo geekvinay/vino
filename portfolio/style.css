@@ -240,8 +240,7 @@ body div.section__about {
 
 body div.section__about img {
   border-radius: 10px;
-  width: 80%;
-  height: 70%;
+  height: 400px;
   margin-top: 10px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -736,8 +735,7 @@ body div.section--slider {
 }
 
 body div.section--slider div.wrapper--left {
-  height: 90%;
-  width: 90%;
+  width: 500px;
   overflow-x: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -897,11 +895,20 @@ body div.section--reviews div.wrapper div.wrapper--items {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 body div.section--reviews div.wrapper div.wrapper--items img {
-  height: 100%;
-  float: left;
+  height: 130px;
   margin-right: 20px;
 }
 
@@ -918,7 +925,7 @@ body div.section--reviews div.wrapper div.wrapper--items p {
   padding: 10px 0;
 }
 
-body div.section--reviews div.wrapper div.wrapper--items span {
+body div.section--reviews div.wrapper div.wrapper--items p span {
   font-family: var(--font-heading);
   font-weight: 600;
   font-size: 1rem;
@@ -1214,7 +1221,7 @@ body div.footer div.wrapper--links a:last-child {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
   body div.hero__section {
     width: 100%;
     -webkit-box-align: start;
@@ -1268,13 +1275,34 @@ body div.footer div.wrapper--links a:last-child {
   }
   body div.section--education {
     background: none;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     text-align: center;
   }
   body div.section--education h2 {
     text-align: center;
+  }
+  body div.section--education div.wrapper--items {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body div.section--education div.wrapper--items span.dates {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  body div.section--education div.wrapper--items h3 {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  body div.section--education div.wrapper--items p {
+    width: 90%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
 }
 /*# sourceMappingURL=style.css.map */

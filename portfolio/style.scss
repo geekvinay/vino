@@ -183,8 +183,7 @@ body {
 
     img {
       border-radius: 10px;
-      width: 80%;
-      height: 70%;
+      height: 400px;
       margin-top: 10px;
       object-fit: cover;
       justify-self: center;
@@ -524,8 +523,7 @@ body {
     grid-gap: 50px;
     margin: 100px 0;
     div.wrapper--left {
-      height: 90%;
-      width: 90%;
+      width: 500px;
       overflow-x: hidden;
       display: flex;
       flex-direction: row;
@@ -627,9 +625,11 @@ body {
         padding: 30px 10px;
         box-sizing: border-box;
         width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
         img {
-          height: 100%;
-          float: left;
+          height: 130px;
           margin-right: 20px;
         }
         p {
@@ -639,13 +639,13 @@ body {
           width: 100%;
           margin: 0;
           padding: 10px 0;
-        }
-        span {
-          font-family: var(--font-heading);
-          font-weight: 600;
-          font-size: 1rem;
-          color: var(--color-blue);
-          padding: 0;
+          span {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            font-size: 1rem;
+            color: var(--color-blue);
+            padding: 0;
+          }
         }
       }
     }
@@ -867,7 +867,7 @@ body {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
   body {
     div.hero__section {
       width: 100%;
@@ -914,12 +914,24 @@ body {
 
     div.section--education {
       background: none;
-      justify-content: center;
+      align-items: center;
       text-align: center;
       h2 {
         text-align: center;
       }
-      div.wrapper
+      div.wrapper--items {
+        align-items: center;
+        span.dates {
+          align-self: center;
+        }
+        h3 {
+          align-self: center;
+        }
+        p {
+          width: 90%;
+          align-self: center;
+        }
+      }
     }
   }
 }
