@@ -2,12 +2,12 @@
   "name": "portfolio",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^2.7.2"
+    "vite": "^2.7.12"
   },
   "dependencies": {
     "normalize.css": "^8.0.1"
