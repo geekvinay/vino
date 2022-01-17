@@ -58,6 +58,17 @@
   font-weight: bold;
 }
 
+.section--hidden {
+  opacity: 0;
+  -webkit-transform: translateY(8rem);
+          transform: translateY(8rem);
+}
+
+.section {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
 body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -222,8 +233,8 @@ body div.section--about {
           box-sizing: border-box;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 0.7fr 1fr;
+      grid-template-columns: 0.7fr 1fr;
   -ms-grid-rows: 1fr;
       grid-template-rows: 1fr;
   -webkit-box-pack: center;
@@ -1044,7 +1055,6 @@ body div.section--contact form div.wrapper {
 body div.section--contact form div.wrapper input {
   height: 20px;
   width: 20px;
-  margin: 0;
   padding: 0;
 }
 
@@ -1448,6 +1458,48 @@ body div.footer div.wrapper--links a:last-child {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
+  }
+  body div.section--contact {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    padding: 0 5vw;
+    width: 90vw;
+  }
+  body div.section--contact form {
+    width: 100%;
+  }
+  body div.section--contact form input {
+    width: 95%;
+  }
+  body div.section--contact form text-area {
+    width: 95%;
+  }
+  body div.section--contact form button {
+    width: 95%;
+  }
+  body div.footer {
+    padding: 0 5vw;
+  }
+  body div.footer h3 {
+    font-size: 1.3rem;
+    padding: 40px 0;
+  }
+  body div.footer div.wrapper--icons i {
+    padding: 5px;
+  }
+  body div.footer div.wrapper--links {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body div.footer div.wrapper--links a {
+    padding: 10px 0;
+  }
+  body div.footer div.wrapper--links a:last-child {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin: 0 auto;
   }
 }
 /*# sourceMappingURL=style.css.map */
