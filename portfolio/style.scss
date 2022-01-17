@@ -63,7 +63,6 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   width: 100vw;
-  min-height: 100vh;
   box-sizing: border-box;
   overflow-x: hidden;
   background-color: #fff;
@@ -122,11 +121,10 @@ body {
   }
 
   // Hero Section
-  div.hero__section {
+  div.hero--section {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    min-height: calc(100vh - 100px);
     width: 100vw;
     box-sizing: border-box;
     padding: 0;
@@ -135,6 +133,7 @@ body {
     background-position: right 100px top 0px;
     background-size: 45%;
     margin-top: 80px;
+    margin-bottom: 100px;
     h1 {
       font-family: var(--font-logo);
       font-weight: 900;
@@ -168,22 +167,21 @@ body {
   // Hero Section ends here
 
   // About Section
-  div.section__about {
-    min-height: 80vh;
+  div.section--about {
     width: 100vw;
     box-sizing: border-box;
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     justify-content: center;
     align-content: center;
-    grid-gap: 50px 50px;
+    grid-gap: 50px;
     padding: 0 10vw;
-    margin: 100px 0 0 0;
+    margin: 100px 0;
 
     img {
       border-radius: 10px;
-      height: 400px;
+      width: 400px;
       margin-top: 10px;
       object-fit: cover;
       justify-self: center;
@@ -193,7 +191,7 @@ body {
       display: flex;
       flex-direction: column;
       padding-top: 20px;
-
+      height: fit-content;
       h2 {
         font-family: var(--font-logo);
         font-weight: 900;
@@ -229,7 +227,7 @@ body {
   // About Section ends here
 
   // Experience Section
-  div.section__experience {
+  div.section--experience {
     margin: 100px 0;
     width: 100vw;
     padding: 0 10vw;
@@ -523,7 +521,7 @@ body {
     grid-gap: 50px;
     margin: 100px 0;
     div.wrapper--left {
-      width: 500px;
+      width: 380px;
       overflow-x: hidden;
       display: flex;
       flex-direction: row;
@@ -531,8 +529,7 @@ body {
       align-items: center;
       border-radius: 5px;
       img {
-        height: 100%;
-        width: 100%;
+        align-self: flex-start;
       }
     }
     div.wrapper--right {
@@ -758,7 +755,6 @@ body {
   // Section Footer
   div.footer {
     width: 100%;
-    min-height: 70vh;
     padding: 0 10vw;
     box-sizing: border-box;
     display: flex;
@@ -822,28 +818,53 @@ body {
 }
 
 // Media Queries
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1000px) {
   body {
     nav.nav {
       ul {
         display: none;
       }
     }
-    div.hero__section {
+    div.hero--section {
       background: none;
       width: 100%;
       align-items: center;
       h1 {
-        width: 80vw;
+        align-self: center;
         text-align: center;
+        font-size: 7rem;
+        width: 90vw;
+        padding: 0;
+        margin: 0 auto;
       }
       p {
-        width: 70vw;
+        align-self: center;
+        width: 90vw;
+        padding: 0;
         text-align: center;
+        font-size: 2rem;
+        line-height: normal;
       }
       div.wrapper--btn {
+        align-self: center;
         width: fit-content;
+        padding: 0;
       }
+    }
+
+    div.section--about {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+      padding: 0 5vw;
+      text-align: center;
+      margin-top: 100px;
+      img {
+        width: 500px;
+      }
+    }
+
+    div.section--experience {
+      margin-bottom: 100px;
     }
 
     div.section--projects {
@@ -854,7 +875,7 @@ body {
 
     div.section--reviews {
       align-self: center;
-      width: 80%;
+      width: 90vw;
       align-items: center;
       h2 {
         text-align: center;
@@ -867,9 +888,9 @@ body {
   }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 768px) {
   body {
-    div.hero__section {
+    div.hero--section {
       width: 100%;
       align-items: flex-start;
       h1 {
@@ -880,18 +901,19 @@ body {
       }
     }
 
-    div.section__about {
+    div.section--about {
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 1.5fr;
       img {
         align-self: center;
         justify-self: center;
+        width: 80vw;
       }
     }
 
-    div.section__experience {
+    div.section--experience {
       grid-template-columns: 1fr;
-      grid-template-rows: 0.5fr 1fr 1fr 1fr;
+      grid-template-rows: 0.5fr repeat(3, 1fr);
       h2 {
         grid-row: 1 / 2;
         grid-column: 1 / 2;
@@ -910,6 +932,11 @@ body {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
       }
+    }
+
+    div.section--slider {
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.8fr 1fr;
     }
 
     div.section--education {
@@ -932,6 +959,109 @@ body {
           align-self: center;
         }
       }
+
+      div.section--projects {
+        div.wrapper {
+          grid-template-columns: 1fr;
+          grid-template-rows: 1fr 1fr 1fr;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    nav {
+      padding: 0 5vw;
+      height: 70px;
+      a.logo {
+        font-size: 1.8rem;
+      }
+    }
+
+    div.hero--section {
+      div.wrapper--btn {
+        flex-direction: column;
+        .btn {
+          width: 200px;
+          margin: 5px 0;
+        }
+      }
+    }
+
+    div.section--about {
+      padding: 0 3vw;
+      text-align: center;
+    }
+
+    div.section--experience {
+      text-align: center;
+      padding: 0 3vw;
+      align-content: center;
+      h3,
+      span.dates {
+        align-self: center;
+      }
+    }
+
+    div.section--learnings {
+      text-align: center;
+      div.section--wrapper--left {
+        align-items: center;
+        h3 {
+          align-self: center;
+        }
+      }
+    }
+
+    div.section--education {
+      padding: 0 4vw;
+    }
+
+    div.section--projects {
+      padding: 0 5vw;
+      div.wrapper {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+      }
+    }
+
+    div.section--slider {
+      box-sizing: border-box;
+      padding: 0 5vw;
+      width: 100vw;
+      overflow-x: hidden;
+      grid-gap: 10px;
+      div.wrapper--left {
+        width: 90vw;
+        img {
+          width: 90vw;
+        }
+      }
+      div.wrapper--right {
+        width: 90vw;
+        text-align: center;
+        div.wrapper--btn {
+          justify-content: center;
+        }
+      }
+    }
+
+    div.section--reviews {
+      div.wrapper {
+        width: 90vw;
+        div.wrapper--items {
+          flex-direction: column;
+          align-items: center;
+          img {
+            width: fit-content;
+          }
+        }
+      }
+    }
+
+    div.section--contact {
     }
   }
 }
