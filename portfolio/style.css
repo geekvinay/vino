@@ -69,6 +69,11 @@
   transition: all 0.5s ease-in-out;
 }
 
+.lazy-img {
+  -webkit-filter: blur(20px);
+          filter: blur(20px);
+}
+
 body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -81,10 +86,62 @@ body {
       -ms-flex-pack: start;
           justify-content: flex-start;
   width: 100vw;
+  overflow-x: hidden;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  overflow-x: hidden;
   background-color: #fff;
+}
+
+body div.loading--screen {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: #fff;
+  z-index: 9999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body div.loading--screen div.loading--screen__container p {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--color-blue);
+  font-family: var(--font-heading);
+}
+
+body div.loading--screen div.loading--screen__container div.dot--container {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+body div.loading--screen div.loading--screen__container div.dot--container span.dot {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #3f444d9d;
+  margin: 0 0.5rem;
 }
 
 body nav {
@@ -179,7 +236,7 @@ body div.hero--section {
           box-sizing: border-box;
   padding: 0;
   margin: 0;
-  background: url(Media/Images/Hero--Image.svg) no-repeat;
+  background: url(Media/Images-Lazy/Hero--Image.svg) no-repeat;
   background-position: right 100px top 0px;
   background-size: 45%;
   margin-top: 80px;
@@ -434,7 +491,7 @@ body div.section--divider div.background--image {
   border-radius: 10px;
   height: 300px;
   width: calc(100vw - 200px);
-  background: url(Media/Images/divider--image.png) no-repeat;
+  background: url(Media/Images-Lazy/divider--image.png) no-repeat;
 }
 
 body div.section--divider div.background--image h3 {
@@ -560,7 +617,7 @@ body div.section--education {
       -ms-flex-pack: start;
           justify-content: flex-start;
   margin-bottom: 100px;
-  background: url(Media/Images/education--image.svg) no-repeat;
+  background: url(Media/Images-Lazy/education--image.svg) no-repeat;
   background-size: 40%;
   background-position: bottom 50px right 100px;
 }
