@@ -236,7 +236,7 @@ body div.hero--section {
           box-sizing: border-box;
   padding: 0;
   margin: 0;
-  background: url(Media/Images-Lazy/Hero--Image.svg) no-repeat;
+  background: url(Media/Images/Hero--Image.svg) no-repeat;
   background-position: right 100px top 0px;
   background-size: 45%;
   margin-top: 80px;
@@ -491,7 +491,7 @@ body div.section--divider div.background--image {
   border-radius: 10px;
   height: 300px;
   width: calc(100vw - 200px);
-  background: url(Media/Images-Lazy/divider--image.png) no-repeat;
+  background: url(Media/Images/divider--image.webp) no-repeat;
 }
 
 body div.section--divider div.background--image h3 {
@@ -617,7 +617,7 @@ body div.section--education {
       -ms-flex-pack: start;
           justify-content: flex-start;
   margin-bottom: 100px;
-  background: url(Media/Images-Lazy/education--image.svg) no-repeat;
+  background: url(Media/Images/education--image.svg) no-repeat;
   background-size: 40%;
   background-position: bottom 50px right 100px;
 }
@@ -804,7 +804,9 @@ body div.section--slider {
 }
 
 body div.section--slider div.wrapper--left {
+  position: relative;
   width: 380px;
+  padding: 40px;
   overflow-x: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -813,9 +815,6 @@ body div.section--slider div.wrapper--left {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -823,8 +822,64 @@ body div.section--slider div.wrapper--left {
 }
 
 body div.section--slider div.wrapper--left img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 90%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   -ms-flex-item-align: start;
       align-self: flex-start;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: all 1.5s ease;
+  transition: all 1.5s ease;
+  border-radius: 5px;
+}
+
+body div.section--slider div.wrapper--left div.dot--container {
+  position: absolute;
+  height: 30px;
+  width: 380px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  justify-self: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateY(110%);
+          transform: translateY(110%);
+}
+
+body div.section--slider div.wrapper--left div.dot--container button.dot {
+  background-color: #8a8a8a98;
+  height: 15px;
+  width: 15px;
+  border: none;
+  border-radius: 50%;
+  margin: 0 5px;
+  -webkit-transition: all 1.5s ease;
+  transition: all 1.5s ease;
+}
+
+body div.section--slider div.wrapper--left div.dot--container button.dot:hover {
+  cursor: pointer;
+}
+
+body div.section--slider div.wrapper--left div.dot--container button.dot--active {
+  background-color: #212121;
 }
 
 body div.section--slider div.wrapper--right {
@@ -913,6 +968,10 @@ body div.section--slider div.wrapper--right div.wrapper--btn {
 body div.section--slider div.wrapper--right div.wrapper--btn img {
   width: 60px;
   margin-left: 10px;
+}
+
+body div.section--slider div.wrapper--right div.wrapper--btn:hover {
+  cursor: pointer;
 }
 
 body div.section--reviews {

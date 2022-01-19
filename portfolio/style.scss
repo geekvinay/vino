@@ -179,7 +179,7 @@ body {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    background: url(Media/Images-Lazy/Hero--Image.svg) no-repeat;
+    background: url(Media/Images/Hero--Image.svg) no-repeat;
     background-position: right 100px top 0px;
     background-size: 45%;
     margin-top: 80px;
@@ -348,7 +348,7 @@ body {
       border-radius: 10px;
       height: 300px;
       width: calc(100vw - 200px);
-      background: url(Media/Images-Lazy/divider--image.png) no-repeat;
+      background: url(Media/Images/divider--image.webp) no-repeat;
       h3 {
         font-family: var(--font-logo);
         font-weight: 600;
@@ -439,7 +439,7 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     margin-bottom: 100px;
-    background: url(Media/Images-Lazy/education--image.svg) no-repeat;
+    background: url(Media/Images/education--image.svg) no-repeat;
     background-size: 40%;
     background-position: bottom 50px right 100px;
     h2 {
@@ -571,15 +571,53 @@ body {
     grid-gap: 50px;
     margin: 100px 0;
     div.wrapper--left {
+      position: relative;
       width: 380px;
+      padding: 40px;
       overflow-x: hidden;
       display: flex;
       flex-direction: row;
-      justify-content: flex-start;
       align-items: center;
       border-radius: 5px;
       img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 90%;
+        width: 100%;
+        object-fit: cover;
         align-self: flex-start;
+        padding: 10px;
+        box-sizing: border-box;
+        transition: all 1.5s ease;
+        border-radius: 5px;
+      }
+      div.dot--container {
+        position: absolute;
+        height: 30px;
+        width: 380px;
+        align-self: flex-end;
+        justify-self: flex-start;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(110%);
+        button.dot {
+          background-color: #8a8a8a98;
+          height: 15px;
+          width: 15px;
+          border: none;
+          border-radius: 50%;
+          margin: 0 5px;
+          transition: all 1.5s ease;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+        button.dot--active {
+          background-color: #212121;
+        }
       }
     }
     div.wrapper--right {
@@ -636,6 +674,9 @@ body {
         img {
           width: 60px;
           margin-left: 10px;
+        }
+        &:hover {
+          cursor: pointer;
         }
       }
     }

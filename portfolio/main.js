@@ -23,54 +23,46 @@ allSections.forEach(function (section) {
     section.classList.add('section--hidden');
 });
 
-// Lazy loading images
-const imgTargets = document.querySelectorAll('img[data-src]');
+// Slider animation
+const wrapperSlider = document.querySelector('.wrapper--left');
+const btnLeft = document.querySelector('.btn--left');
+const btnRight = document.querySelector('.btn--right');
+const slides = document.querySelectorAll('.slider--img');
+const dotContainer = document.querySelector('.dot--container');
+const dots = document.querySelectorAll('.dot');
+console.log(dotContainer);
 
-const loadImg = function (entries, observer) {
-    const [entry] = entries;
 
-    if (!entry.isIntersecting) return;
-
-    // Replace src with data-src
-    entry.target.src = entry.target.dataset.src;
-
-    entry.target.addEventListener('load', function () {
-        entry.target.classList.remove('lazy-img');
+dotContainer.addEventListener('click', (e) => {
+    dots.forEach((d, i) => {
+        d.classList.remove('dot--active');
     });
-
-    observer.unobserve(entry.target);
-};
-
-const imgObserver = new IntersectionObserver(loadImg, {
-    root: null,
-    threshold: 0,
-    rootMargin: '200px',
+    console.log(e.target);
+    let targetSlide = e.target.dataset.index;
+    console.log(targetSlide);
+    gotToSlide(targetSlide);
+    e.target.classList.add('dot--active');
+    clearInterval(autoPlay);
 });
 
-imgTargets.forEach(img => imgObserver.observe(img));
+// console.log(slides);
+let currSlide = 0;
+let maxSlide = slides.length - 1;
+console.log(maxSlide);
+slides.forEach((s, i) => {
+    s.style.transform = `translateX(${100 * i}%)`;
+});
 
 
-// Lazy loading for Backgrounds
-(() => {
-    const imgTargets = document.querySelectorAll('img[data-background]');
-
-    const loadImg = function (entries, observer) {
-        const [entry] = entries;
-
-        if (!entry.isIntersecting) return;
-
-        // Replace src with data-src
-        entry.target.src = entry.target.dataset.background;
-        entry.target.addEventListener('load', function () {
-            entry.target.classList.remove('lazy-img');
-        });
-        observer.unobserve(entry.target);
-    };
-
-    const imgObserver = new IntersectionObserver(loadImg, {
-        root: null,
-        threshold: 0,
-        rootMargin: '200px',
+function gotToSlide(slide) {
+    slides.forEach((s, i) => {
+        console.log(i, s);
+        s.style.transform = `translateX(${100 * (i - slide)}%)`;
     });
-    imgTargets.forEach(img => imgObserver.observe(img));
-})();
+}
+
+const autoPlay = setInterval(() => {
+    currSlide++;
+    if (currSlide > maxSlide) currSlide = 0;
+    gotToSlide(currSlide);
+}, 4000);
