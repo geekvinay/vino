@@ -7,39 +7,29 @@
     <title>Vite App</title>
   </head>
   <body id="body">
-    <!-- <div class="loading--screen">
-      <div class="loading--screen__container">
-        <div class="loading--screen__text">
-          <p>Loading</p>
-          <div class="dot--container">
-            <span class="dot dot1"></span>
-            <span class="dot dot2"></span>
-            <span class="dot dot3"></span>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
     <div class="menu--modal">
       <ul class="links">
-        <li class="link">Home</li>
-        <li class="link">About</li>
-        <li class="link">Services</li>
-        <li class="link">Project</li>
-        <li class="link">Contact</li>
+        <li class="link"><a href="#body">Home</a></li>
+        <li class="link"><a href="#about">About</a></li>
+        <li class="link"><a href="#experience">Experience</a></li>
+        <li class="link"><a href="#projects">Project</a></li>
+        <li class="link"><a href="#contact">Contact</a></li>
       </ul>
     </div>
 
     <!-- Navigation bar -->
     <nav class="nav nav__sticky">
-      <a href="#" class="logo">Vinay</a>
+      <a href="#" class="logo">Vino</a>
       <ul>
-        <li><a href="">About</a></li>
-        <li><a href="">Services</a></li>
-        <li><a href="">Projects</a></li>
-        <li><a href="">Contact</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#learning">Learning</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
         <a href=""><i class="fab fa-linkedin-in"></i></a>
-        <a href=""><i class="fab fa-twitter"></i></a>
+        <a href="https://twitter.com/_vinaykishore" target="_blank"
+          ><i class="fab fa-twitter"></i
+        ></a>
         <a href=""><i class="fab fa-instagram"></i></a>
       </ul>
       <div class="hamburger" id="hamburger-1">
@@ -53,7 +43,7 @@
     <div
       class="hero--section"
       data-background="Media/Images/Hero--Image.svg"
-      id="hero--section"
+      id="hero"
     >
       <h1>
         Hi I am Vinay I'm a
@@ -69,17 +59,17 @@
         <span class="font--bold">functional websites</span>.
       </p>
       <div class="wrapper--btn">
-        <a href="#" class="btn btn--primary">
+        <a href="#about" class="btn btn--primary">
           <span>Discover</span>
         </a>
-        <a href="#" class="btn btn--secondary">
+        <a href="#learning" class="btn btn--secondary">
           <span>Know More</span>
         </a>
       </div>
     </div>
 
     <!-- Profile About Section -->
-    <div class="section--about section">
+    <div class="section--about section" id="about">
       <img
         src="Media/Images/Profile--image.webp"
         data-src="Media/Images/Profile--image.png"
@@ -107,7 +97,7 @@
     <!-- Profile ends here -->
 
     <!-- Experience section -->
-    <div class="section--experience section">
+    <div class="section--experience section" id="experience">
       <h2 class="color--blue">My Experience</h2>
       <div class="experience--items item-1">
         <span class="dates color--blue">2019 - PRESENT</span>
@@ -142,7 +132,7 @@
           Feel free to Contact me if you have a writing, design or devlopement
           project. I am available anytime at moderate costs
         </h3>
-        <a href="#" class="btn btn--primary">
+        <a href="#contact" class="btn btn--primary">
           <span>Contact Me</span>
         </a>
       </div>
@@ -150,7 +140,7 @@
     <!-- Divider ends here -->
 
     <!-- Learnings section -->
-    <div class="section--learnings section">
+    <div class="section--learnings section" id="learning">
       <h2>My Learnings</h2>
       <div class="section--wrapper">
         <div class="section--wrapper--left">
@@ -192,7 +182,7 @@
 
     <!-- <img src="Media/Images/Hero--Image.svg" alt=""> -->
     <!-- Section Education -->
-    <div class="section--education section">
+    <div class="section--education section" id="education">
       <h2>My Education</h2>
       <div class="wrapper--items">
         <span class="dates color--blue">2020 - PRESENT</span>
@@ -223,7 +213,7 @@
           Feel free to Contact me if you have a writing, design or devlopement
           project. I am available anytime at moderate costs
         </h3>
-        <a href="#" class="btn btn--primary">
+        <a href="#contact" class="btn btn--primary">
           <span>Contact Me</span>
         </a>
       </div>
@@ -231,7 +221,7 @@
     <!-- Divider ends here -->
 
     <!-- Section Projects-->
-    <div class="section--projects section">
+    <div class="section--projects section" id="projects">
       <h2>My Projects</h2>
       <div class="wrapper">
         <section class="wrapper--items">
@@ -302,7 +292,7 @@
     <!-- Section Projects ends here -->
 
     <!-- Section Project Slider-->
-    <div class="section--slider section">
+    <div class="section--slider section" id="slider">
       <div class="wrapper--left">
         <img
           src="Media/Images/slider--img1.webp"
@@ -364,7 +354,7 @@
     <!-- Section Project Slider ends here -->
 
     <!-- Section Reviews-->
-    <div class="section--reviews section">
+    <div class="section--reviews section" id="reviews">
       <h2>Client Feedback</h2>
       <div class="wrapper">
         <div class="wrapper--items">
@@ -420,7 +410,7 @@
     <!-- Section Reviews ends here -->
 
     <!-- Section Quote Request -->
-    <div class="section--contact section">
+    <div class="section--contact section" id="contact">
       <h2>Quote Request</h2>
       <p>
         Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
@@ -458,18 +448,22 @@
       <h3>geekivinay002@gmail.com</h3>
       <div class="wrapper--icons">
         <a href=""><i class="fab fa-facebook-f"></i></a>
-        <a href=""><i class="fab fa-twitter"></i></a>
+        <a href="https://twitter.com/_vinaykishore"
+          ><i class="fab fa-twitter"></i
+        ></a>
         <a href=""><i class="fab fa-instagram"></i></a>
         <a href=""><i class="fab fa-linkedin-in"></i></a>
         <a href=""><i class="fab fa-youtube"></i></a>
         <a href=""><i class="fab fa-github"></i></a>
       </div>
       <div class="wrapper--links">
-        <a href="">Project</a>
+        <a href="#projects">Project</a>
         <a href="">Terms</a>
         <a href="">Privacy</a>
-        <a href="">Contact</a>
-        <a href="">Copyright ©️ Your Name</a>
+        <a href="#contact">Contact</a>
+        <a href="https://twitter.com/_vinaykishore" target="_blank">
+          Copyright ©️ Your Name
+        </a>
       </div>
     </div>
 

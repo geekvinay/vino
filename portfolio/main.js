@@ -37,7 +37,7 @@ dotContainer.addEventListener('click', (e) => {
     // console.log(e.target);
     let targetSlide = e.target.dataset.index;
     gotToSlide(targetSlide);
-    acitivateDot(targetSlide);
+    // acitivateDot(targetSlide);
     clearInterval(autoPlay);
 });
 
@@ -56,15 +56,15 @@ slides.forEach((s, i) => {
 function acitivateDot(index) {
     dots.forEach((d, i) => {
         d.classList.remove('dot--active');
-        if (i === index) d.classList.add('dot--active');
+        if (i == index) d.classList.add('dot--active');
     });
-
 };
 
 function gotToSlide(slide) {
     slides.forEach((s, i) => {
         s.style.transform = `translateX(${100 * (i - slide)}%)`;
     });
+    acitivateDot(slide);
 }
 
 const autoPlay = setInterval(() => {
@@ -86,17 +86,6 @@ function previousSlide() {
     gotToSlide(currSlide);
     clearInterval(autoPlay);
 }
-
-// Sticky navigation
-// const hero = document.querySelector('.hero--section');
-// const navMargin = document.querySelector('.nav__sticky');
-// hero.style.borderBottom = '1px solid #ccc';
-
-// const heroObserver = new IntersectionObserver(entries, {
-//     root: null,
-//     threshold: 0.5,
-// });
-
 
 // Text changing
 const h1All = document.querySelectorAll(".span__color--blue");
@@ -126,6 +115,36 @@ console.log(hamburger);
 
 hamburger.addEventListener("click", function () {
     hamburger.classList.toggle("is-active");
-    console.log('clicked!');
     modalMenu.classList.toggle('active--modal');
 });
+
+modalMenu.addEventListener('click', (e) => {
+    modalMenu.classList.toggle('active--modal');
+});
+
+
+
+// Sticky Navigation
+
+const heroPage = document.querySelector('.hero--section');
+const navBar = document.querySelector('.nav');
+console.log(heroPage);
+
+
+let heroObserver = new IntersectionObserver(function (entries, observer) {
+    const [data] = entries;
+    if (!data.isIntersecting) {
+        navBar.classList.add('is--sticky');
+    } else {
+        navBar.classList.remove('is--sticky');
+    }
+    console.log(data);
+    console.log(entries);
+    console.log(`hello`);
+}, {
+    root: null,
+    threshold: 0.1,
+    rootMargin: `-100px`,
+});
+
+heroObserver.observe(heroPage);

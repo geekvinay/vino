@@ -58,6 +58,11 @@
   font-weight: bold;
 }
 
+a {
+  color: #212121;
+  text-decoration: none;
+}
+
 .section--hidden {
   opacity: 0;
   transform: translateY(8rem);
@@ -90,7 +95,7 @@ body {
     z-index: 1;
     width: 100vw;
     background-color: rgb(234, 240, 250);
-    position: absolute;
+    position: fixed;
     top: 0px;
     padding: 0;
     box-sizing: border-box;
@@ -120,21 +125,27 @@ body {
     transform: translateX(0%);
   }
 
+  nav.is--sticky {
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 20px;
+    position: sticky;
+    top: -3px;
+    transform: translateY(0%);
+  }
+
   // navigation bar
   nav {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     background-color: #fff;
-    box-shadow: rgba(0, 0, 0, 0.103) 0px 0px 20px;
     width: 100vw;
     height: 80px;
     padding: 0 10vw;
     box-sizing: border-box;
     z-index: 2;
-    // position: sticky;
-    // top: -3px;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.8s ease-in-out;
+    position: sticky;
+    top: -120px;
     a.logo {
       text-decoration: none;
       color: var(--color-blue);
@@ -286,8 +297,7 @@ body {
     justify-content: center;
     align-content: center;
     grid-gap: 50px;
-    padding: 0 10vw;
-    margin: 100px 0;
+    padding: 100px 10vw;
 
     img {
       border-radius: 10px;
@@ -338,9 +348,8 @@ body {
 
   // Experience Section
   div.section--experience {
-    margin: 100px 0;
+    padding: 100px 10vw;
     width: 100vw;
-    padding: 0 10vw;
     box-sizing: border-box;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -431,12 +440,11 @@ body {
 
   div.section--learnings {
     width: 100vw;
-    padding: 0 10vw;
+    padding: 100px 10vw;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin: 100px 0;
     h2 {
       font-family: var(--font-logo);
       color: var(--color-blue);
@@ -549,12 +557,11 @@ body {
   // Section Projects
   div.section--projects {
     width: 100vw;
-    padding: 0 10vw;
+    padding: 100px 10vw;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin: 100px 0;
     background-size: 40%;
     background-position: bottom 50px right 100px;
     h2 {
@@ -670,7 +677,7 @@ body {
           border: none;
           border-radius: 50%;
           margin: 0 5px;
-          transition: all 1.5s ease;
+          transition: all 0.8s ease;
           &:hover {
             cursor: pointer;
           }
@@ -803,13 +810,12 @@ body {
   // Section Quote Request
   div.section--contact {
     width: 100%;
-    padding: 0 10vw;
+    padding: 100px 10vw;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    margin: 100px 0;
     h2 {
       font-family: var(--font-logo);
       color: var(--color-blue);
@@ -1133,10 +1139,8 @@ body {
 @media screen and (max-width: 500px) {
   body {
     div.menu--modal {
-      top: -100px;
       ul {
-        padding: 0;
-        padding-top: 100px;
+        padding: 60px 0;
       }
     }
 
@@ -1202,6 +1206,7 @@ body {
       overflow-x: hidden;
       grid-gap: 10px;
       div.wrapper--left {
+        padding: 40px 0;
         width: 90vw;
         img {
           width: 90vw;
