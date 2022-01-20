@@ -501,12 +501,11 @@ body {
   // Section Education
   div.section--education {
     width: 100vw;
-    padding: 0 10vw;
+    padding: 100px 10vw;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin-bottom: 100px;
     background: url(Media/Images/education--image.svg) no-repeat;
     background-size: 40%;
     background-position: bottom 50px right 100px;

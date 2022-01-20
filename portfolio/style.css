@@ -680,7 +680,7 @@ body div.section--learnings div.section--wrapper--right {
 
 body div.section--education {
   width: 100vw;
-  padding: 0 10vw;
+  padding: 100px 10vw;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: -webkit-box;
@@ -693,7 +693,6 @@ body div.section--education {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  margin-bottom: 100px;
   background: url(Media/Images/education--image.svg) no-repeat;
   background-size: 40%;
   background-position: bottom 50px right 100px;
