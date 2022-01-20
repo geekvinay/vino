@@ -120,6 +120,7 @@ hamburger.addEventListener("click", function () {
 
 modalMenu.addEventListener('click', (e) => {
     modalMenu.classList.toggle('active--modal');
+    hamburger.classList.toggle("is-active");
 });
 
 
