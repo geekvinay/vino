@@ -34,29 +34,35 @@ console.log(dotContainer);
 
 
 dotContainer.addEventListener('click', (e) => {
-    dots.forEach((d, i) => {
-        d.classList.remove('dot--active');
-    });
-    console.log(e.target);
+    // console.log(e.target);
     let targetSlide = e.target.dataset.index;
-    console.log(targetSlide);
     gotToSlide(targetSlide);
-    e.target.classList.add('dot--active');
+    acitivateDot(targetSlide);
     clearInterval(autoPlay);
 });
+
+btnLeft.addEventListener('click', nextSlide);
+btnRight.addEventListener('click', previousSlide);
+
 
 // console.log(slides);
 let currSlide = 0;
 let maxSlide = slides.length - 1;
-console.log(maxSlide);
 slides.forEach((s, i) => {
     s.style.transform = `translateX(${100 * i}%)`;
 });
 
 
+function acitivateDot(index) {
+    dots.forEach((d, i) => {
+        d.classList.remove('dot--active');
+        if (i === index) d.classList.add('dot--active');
+    });
+
+};
+
 function gotToSlide(slide) {
     slides.forEach((s, i) => {
-        console.log(i, s);
         s.style.transform = `translateX(${100 * (i - slide)}%)`;
     });
 }
@@ -66,3 +72,60 @@ const autoPlay = setInterval(() => {
     if (currSlide > maxSlide) currSlide = 0;
     gotToSlide(currSlide);
 }, 4000);
+
+function nextSlide() {
+    currSlide++;
+    if (currSlide > maxSlide) currSlide = 0;
+    gotToSlide(currSlide);
+    clearInterval(autoPlay);
+}
+
+function previousSlide() {
+    currSlide--;
+    if (currSlide < 0) currSlide = maxSlide;
+    gotToSlide(currSlide);
+    clearInterval(autoPlay);
+}
+
+// Sticky navigation
+// const hero = document.querySelector('.hero--section');
+// const navMargin = document.querySelector('.nav__sticky');
+// hero.style.borderBottom = '1px solid #ccc';
+
+// const heroObserver = new IntersectionObserver(entries, {
+//     root: null,
+//     threshold: 0.5,
+// });
+
+
+// Text changing
+const h1All = document.querySelectorAll(".span__color--blue");
+let currH1 = 0, h1Length = h1All.length;
+
+h1All.forEach((h1, i) => {
+    h1.style.transform = `translateY(${i * 100}%)`;
+})
+
+setInterval(function () {
+    currH1 += 1;
+
+    if (currH1 === h1Length) currH1 = 0;
+    h1All.forEach((h1, i) => {
+        h1.style.opacity = 1
+        if (currH1 != i)
+            h1.style.opacity = 0;
+        h1.style.transform = `translateY(${100 * (i - currH1)}%)`;
+    });
+}, 2000);
+
+
+// Hamburger Animation
+const hamburger = document.querySelector(".hamburger");
+const modalMenu = document.querySelector(".menu--modal");
+console.log(hamburger);
+
+hamburger.addEventListener("click", function () {
+    hamburger.classList.toggle("is-active");
+    console.log('clicked!');
+    modalMenu.classList.toggle('active--modal');
+});

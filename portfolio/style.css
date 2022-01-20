@@ -92,56 +92,56 @@ body {
   background-color: #fff;
 }
 
-body div.loading--screen {
-  position: absolute;
+body div.menu--modal {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
   height: 100vh;
+  z-index: 1;
   width: 100vw;
-  background-color: #fff;
-  z-index: 9999;
+  background-color: #eaf0fa;
+  position: absolute;
+  top: 0px;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  color: var(--color-blue);
+}
+
+body div.menu--modal ul {
+  width: 100vw;
+  height: 100vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-body div.loading--screen div.loading--screen__container p {
-  font-size: 2rem;
-  font-weight: 600;
-  color: var(--color-blue);
   font-family: var(--font-heading);
+  font-size: 2rem;
 }
 
-body div.loading--screen div.loading--screen__container div.dot--container {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+body div.menu--modal ul li {
+  margin: 0;
+  padding: 0;
 }
 
-body div.loading--screen div.loading--screen__container div.dot--container span.dot {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #3f444d9d;
-  margin: 0 0.5rem;
+body div.active--modal {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
 }
 
 body nav {
@@ -164,9 +164,8 @@ body nav {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   z-index: 2;
-  position: -webkit-sticky;
-  position: sticky;
-  top: -3px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 body nav a.logo {
@@ -220,6 +219,44 @@ body nav ul i:hover {
   color: var(--color-pink);
 }
 
+body nav .hamburger {
+  display: none;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+body nav .hamburger .line {
+  width: 40px;
+  height: 4px;
+  background-color: var(--color-blue);
+  border-radius: 3px;
+  display: block;
+  margin: 8px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+body nav .hamburger :hover {
+  cursor: pointer;
+}
+
+body nav #hamburger-1.is-active .line:nth-child(2) {
+  opacity: 0;
+}
+
+body nav #hamburger-1.is-active .line:nth-child(1) {
+  -webkit-transform: translateY(12px) rotate(45deg);
+  transform: translateY(12px) rotate(45deg);
+}
+
+body nav #hamburger-1.is-active .line:nth-child(3) {
+  -webkit-transform: translateY(-12px) rotate(-45deg);
+  transform: translateY(-12px) rotate(-45deg);
+}
+
 body div.hero--section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -240,7 +277,7 @@ body div.hero--section {
   background-position: right 100px top 0px;
   background-size: 45%;
   margin-top: 80px;
-  margin-bottom: 100px;
+  padding-bottom: 100px;
 }
 
 body div.hero--section h1 {
@@ -253,6 +290,32 @@ body div.hero--section h1 {
   margin: 0;
   padding: 0;
   padding-left: 80px;
+}
+
+body div.hero--section h1 span.wrapper--blue {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  position: relative;
+  height: 4.3rem;
+  overflow-y: hidden;
+  padding: 10px;
+}
+
+body div.hero--section h1 span.wrapper--blue span.span__color--blue {
+  text-align: center;
+  background-color: #fff;
+  top: 0;
+  position: absolute;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 body div.hero--section p {
@@ -274,8 +337,9 @@ body div.hero--section div.wrapper--btn {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   padding-left: 100px;
   padding-top: 20px;
 }
@@ -1303,6 +1367,9 @@ body div.footer div.wrapper--links a:last-child {
   body nav.nav ul {
     display: none;
   }
+  body nav.nav .hamburger {
+    display: inline-block;
+  }
   body div.hero--section {
     background: none;
     width: 100%;
@@ -1319,6 +1386,12 @@ body div.footer div.wrapper--links a:last-child {
     width: 90vw;
     padding: 0;
     margin: 0 auto;
+  }
+  body div.hero--section h1 span.wrapper--blue {
+    padding: 50px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   body div.hero--section p {
     -ms-flex-item-align: center;
@@ -1387,6 +1460,9 @@ body div.footer div.wrapper--links a:last-child {
   }
   body div.hero--section h1 {
     font-size: 2.5rem;
+  }
+  body div.hero--section h1 span.wrapper--blue {
+    padding: 0;
   }
   body div.hero--section p {
     font-size: 1.5rem;
@@ -1477,6 +1553,13 @@ body div.footer div.wrapper--links a:last-child {
 }
 
 @media screen and (max-width: 500px) {
+  body div.menu--modal {
+    top: -100px;
+  }
+  body div.menu--modal ul {
+    padding: 0;
+    padding-top: 100px;
+  }
   body nav {
     padding: 0 5vw;
     height: 70px;
