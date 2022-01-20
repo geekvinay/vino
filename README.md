@@ -15,31 +15,32 @@ The key features of this template are :
 ## Installation
 I've made this template using Vite js. It is a front-end tool that is present in npm. 
 > Why did I use Vite? 
-I've used Vite because of the speed it provides.
-
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+I've used [VITE](https://vitejs.dev/)  because of the speed it provides.
 
 ```bash
+# clone the repository onto your local machine.
 git clone "address of the repository"
+
+# Go/Open the repository
 cd vite
+
+# Install all the dependencies
 npm  install
-cd pac
+
+# Run a developer server to view the output
+npm run dev
 ```
 
 ## Usage
+You can use this template for your personal use with the standard license. The standard license provides the rights of using this template at no risk. I've included all the required media files in the repository itself. Please read to the notes to change some must to changes before deploying this template.
 
-```python
-import foobar
+## Notes:
+* Make sure you change the details of all the meta tags. Here, Let me explain where all the changes should go into. I will explain this with a small snippet.
+```html
 
-# returns 'words'
-foobar.pluralize('word')
 
-# returns 'geese'
-foobar.pluralize('goose')
-
-# returns 'phenomenon'
-foobar.singularize('phenomena')
 ```
+
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
