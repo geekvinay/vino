@@ -13,11 +13,17 @@ The key features of this template are :
 * Built with **HTML**, **CSS**, **JavaScript** and **Vite**
 
 ## Installation
+I've made this template using Vite js. It is a front-end tool that is present in npm. 
+> Why did I use Vite? 
+I've used Vite because of the speed it provides.
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
 
 ```bash
-pip install foobar
+git clone "address of the repository"
+cd vite
+npm  install
+cd pac
 ```
 
 ## Usage
