@@ -35,11 +35,25 @@ npm run dev
 You can use this template for your personal use with the standard license. The standard license provides the rights of using this template at no risk. I've included all the required media files in the repository itself. Please read to the notes to change some must to changes before deploying this template.
 
 ## Notes:
-* Make sure you change the details of all the meta tags. Here, Let me explain where all the changes should go into. I will explain this with a small snippet.
-```html
+* Make sure you change the details of all the meta tags. Here, Let me explain where all the changes should go into. I will explain this with a small snippet. 
 
-
+```HTML
+<h1> Hi I am "Vinay" </h1>
+<!-- You maybe wanting to change this header line to,
+<h1> Hi I am "Your Name" </h1>
 ```
+
+Follow this method to add the changes to the template as you like to. 
+* Make sure to change the images, even though I've shared some images in this template, you maybe wanting to keep your desired images to go on.
+* Please follow the comments in the respective code to manage to change the template as per your request.
+* You may need an experienced developer to modify the template. The best way is to contact me using this [contact form](https://google.com). You can also contact  me on my social media handles, I would respond to your queires faster on twitter.
+
+<h3 align="left">Connect with me:</h3>
+<p align="left">
+<a href="https://dev.to/vinaykishore" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/devto.svg" alt="vinaykishore" height="30" width="40" /></a>
+<a href="https://twitter.com/_vinaykishore" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="_vinaykishore" height="30" width="40" /></a>
+<a href="https://instagram.com/_vinaykishore" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="_vinaykishore" height="30" width="40" /></a>
+</p>
 
 
 ## Contributing
