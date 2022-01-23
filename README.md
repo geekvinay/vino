@@ -15,6 +15,16 @@ The key features of this template are :
 * This works **buttery smooth** on all major websites.
 * Built with **HTML**, **CSS**, **JavaScript** and **Vite**
 
+## Contact
+You can always contact me on an queries and doubts on my social media and this [contact form](https://forms.gle/1BoqwSVhK2dg2BiR6) as well. Here, I attach my social media handles. 
+
+<h3 align="left">Connect with me:</h3>
+<p align="left">
+<a href="https://dev.to/vinaykishore" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/devto.svg" alt="vinaykishore" height="30" width="40" /></a>
+<a href="https://twitter.com/_vinaykishore" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="_vinaykishore" height="30" width="40" /></a>
+<a href="https://instagram.com/_vinaykishore" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="_vinaykishore" height="30" width="40" /></a>
+</p>
+
 ## Installation
 I've made this template using Vite js. It is a front-end tool that is present in npm. 
 > Why did I use Vite? 
@@ -49,14 +59,8 @@ You can use this template for your personal use with the standard license. The s
 Follow this method to add the changes to the template as you like to. 
 * Make sure to change the images, even though I've shared some images in this template, you maybe wanting to keep your desired images to go on.
 * Please follow the comments in the respective code to manage to change the template as per your request.
-* You may need an experienced developer to modify the template. The best way is to contact me using this [contact form](https://google.com). You can also contact  me on my social media handles, I would respond to your queires faster on twitter.
+* You may need an experienced developer to modify the template. The best way is to contact me using this [contact form](https://forms.gle/1BoqwSVhK2dg2BiR6). You can also contact  me on my social media handles, I would respond to your queires faster on twitter.
 
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-<a href="https://dev.to/vinaykishore" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/devto.svg" alt="vinaykishore" height="30" width="40" /></a>
-<a href="https://twitter.com/_vinaykishore" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="_vinaykishore" height="30" width="40" /></a>
-<a href="https://instagram.com/_vinaykishore" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="_vinaykishore" height="30" width="40" /></a>
-</p>
 
 
 ## Contributing
